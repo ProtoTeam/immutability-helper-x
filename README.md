@@ -11,7 +11,7 @@ npm install -S immutability-helper-x
 
 ## example
 
-```
+```js
 update.$set(data, 'a.b', newValue);
 
 // for the array methods like $push/$unshift, you can update it with two forms
