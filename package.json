@@ -8,6 +8,8 @@
     "immutable"
   ],
   "scripts": {
+    "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "clean": "rimraf lib dist",
     "build": "npm run build:commonjs",
     "prepublish": "npm run clean && npm run build",
@@ -17,16 +19,41 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^2.13.1",
     "cross-env": "^5.0.0",
+    "jest": "^20.0.4",
     "rimraf": "^2.6.1",
     "webpack": "^2.5.1"
   },
   "dependencies": {
     "immutability-helper": "^2.2.0"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
   }
 }

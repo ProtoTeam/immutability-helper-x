@@ -10,6 +10,7 @@ lib
 *.sublime-project
 *.sublime-workspace
 coverage
+.coveralls.yml
 
 # vscode
 jsconfig.json

@@ -1,7 +1,10 @@
 # immutability-helper-x
--------------
 
-this lib extends the [kolodny/immutability-helper](https://github.com/kolodny/immutability-helper) to support update by path string, like the get/set in lodash
+
+> The library extends the [kolodny/immutability-helper](https://github.com/kolodny/immutability-helper) to support update by path string, like the get/set in lodash.
+
+[![Build Status](https://travis-ci.org/ProtoTeam/immutability-helper-x.svg?branch=master)](https://travis-ci.org/ProtoTeam/immutability-helper-x) [![Coverage Status](https://coveralls.io/repos/github/ProtoTeam/immutability-helper-x/badge.svg?branch=master)](https://coveralls.io/github/ProtoTeam/immutability-helper-x?branch=master)
+
 
 ## install
 
@@ -9,9 +12,12 @@ this lib extends the [kolodny/immutability-helper](https://github.com/kolodny/im
 npm install -S immutability-helper-x
 ```
 
-## example
+
+## usage
 
 ```js
+import update, { updateChain } from 'immutability-helper-x';
+
 update.$set(data, 'a.b', newValue);
 
 // for the array methods like $push/$unshift, you can update it with two forms
@@ -47,3 +53,6 @@ const d = updateChain(data)
   .value();
 
 ```
+
+
+
