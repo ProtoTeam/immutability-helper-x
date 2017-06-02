@@ -2,19 +2,9 @@
  * Created by xiaowei.wzw on 17/6/1.
  */
 import update, { updateChain } from '../src/';
+import obj from './obj';
 
 test('a.b.c', () => {
-  const obj = {
-    a: {
-      b: {
-        c: 1,
-        d: 2,
-        e: [3, 2, 1],
-      }
-    },
-    f: 4,
-  };
-
   // set a.b
   expect(update.$set(obj, 'a.b', { g: 5 })).toEqual({
     a: {
@@ -60,4 +50,7 @@ test('a.b.c', () => {
     },
     f: 4,
   });
+
+  expect(update.$set(obj, ' ', { test: 1 })).toEqual({ test: 1 });
+  expect(update.$set(obj, '', { test: 1 })).toEqual({ test: 1 });
 });

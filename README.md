@@ -19,9 +19,12 @@ npm install -S immutability-helper-x
 import update, { updateChain } from 'immutability-helper-x';
 
 update.$set(data, 'a.b', newValue);
+// same as
+update.$set(data, ['a', 'b'], newValue);
 
 // for the array methods like $push/$unshift, you can update it with two forms
 update.$push(data, 'arr', ['car', 'bus']);
+// same as
 update.$push(data, 'arr', 'car', 'bus');
 
 update.$apply(data, 'a.b', value => ++value);
