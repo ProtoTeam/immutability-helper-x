@@ -3,7 +3,7 @@
 
 > The library extends the [kolodny/immutability-helper](https://github.com/kolodny/immutability-helper) to support update by path string, like the get/set in lodash.
 
-[![Build Status](https://travis-ci.org/ProtoTeam/immutability-helper-x.svg?branch=master)](https://travis-ci.org/ProtoTeam/immutability-helper-x) [![Coverage Status](https://coveralls.io/repos/github/ProtoTeam/immutability-helper-x/badge.svg?branch=master)](https://coveralls.io/github/ProtoTeam/immutability-helper-x?branch=master)
+[![Build Status](https://travis-ci.org/ProtoTeam/immutability-helper-x.svg?branch=master)](https://travis-ci.org/ProtoTeam/immutability-helper-x) [![Coverage Status](https://coveralls.io/repos/github/ProtoTeam/immutability-helper-x/badge.svg?branch=master)](https://coveralls.io/github/ProtoTeam/immutability-helper-x?branch=master) [![npm](https://img.shields.io/npm/v/immutability-helper-x.svg)](https://www.npmjs.com/package/immutability-helper-x) 
 
 
 ## install
