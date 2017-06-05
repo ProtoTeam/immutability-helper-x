@@ -4,7 +4,6 @@
  * update.$set(object, 'a.b', newValue);
  * // for the array methods like $push/$unshift, you can update it with two forms
  * update.$push(object, 'arr', ['car', 'bus']);
- * update.$push(object, 'arr', 'car', 'bus');
  * update.$apply(object, 'a.b', value => ++value);
  * **********************************
  * // also support extend method
