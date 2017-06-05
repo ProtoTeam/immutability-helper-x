@@ -32,7 +32,7 @@
     "webpack": "^2.5.1"
   },
   "dependencies": {
-    "immutability-helper": "^2.2.0"
+    "immutability-helper": "^2.2.2"
   },
   "jest": {
     "testRegex": "(/__tests__/.*\\.(test|spec))\\.(ts|tsx|js)$",
