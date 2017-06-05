@@ -12,7 +12,7 @@
  * update.extend('$addtax', function(tax, original) {
  *   return original + (tax * original);
  * });
- * // step 2 
+ * // step 2
  * update.$addtax(object, 'price', 0.8);
  * // or
  * update(object, {
@@ -62,15 +62,11 @@ const funcFactory = methodName => {
       throw new Error(`update extend error: ${methodName} is reserved`);
     }
   });
-  update[methodName] = (object, path, ...value) => {
-    if ((!isUndefined(path) && value.length === 0) || isUndefined(object)) {
+  update[methodName] = (object, path, value) => {
+    if ((!isUndefined(path) && isUndefined(value)) || isUndefined(object)) {
       throw new Error('update: params are not valid');
     }
-    let realValue = value;
-    if (value.length === 1) {
-      realValue = value[0];
-    }
-    const updatable = createUpdatable(methodName, path, realValue);
+    const updatable = createUpdatable(methodName, path, value);
     return update(object, updatable);
   };
   addChainMethod(methodName);
