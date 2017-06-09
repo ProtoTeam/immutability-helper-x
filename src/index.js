@@ -49,7 +49,7 @@ const createUpdatable = (methodName, path, value) => {
   if (isString(realPath)) {
     if (realPath.trim() === '') { return obj; }
     // [n] => .n
-    realPath = realPath.replace(/(\[\d+\])/g, s => `.${s.sslice(1, -1)}`);
+    realPath = realPath.replace(/(\[\d+\])/g, s => `.${s.slice(1, -1)}`);
     realPath = realPath.split('.');
   }
   return realPath.reduceRight((prev, node) => ({ [node]: prev }), obj);

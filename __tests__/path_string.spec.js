@@ -39,6 +39,17 @@ test('a.b.c', () => {
     f: 4,
   });
 
+  expect(update.$set(obj, 'a.b.e[2]', 9)).toEqual({
+    a: {
+      b: {
+        c: 1,
+        d: 2,
+        e: [3, 2, 9],
+      }
+    },
+    f: 4,
+  });
+
   expect(update.$set(obj, ' ', { test: 1 })).toEqual({ test: 1 });
   expect(update.$set(obj, '', { test: 1 })).toEqual({ test: 1 });
 });
