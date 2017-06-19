@@ -61,8 +61,8 @@ const funcFactory = methodName => {
       throw new Error(`update extend error: ${methodName} is reserved`);
     }
   });
-  update[methodName] = (object, path, value) => {
-    if ((!isUndefined(path) && isUndefined(value)) || isUndefined(object)) {
+  update[methodName] = function (object, path, value) {
+    if (arguments.length < 3 || isUndefined(object)) {
       throw new Error('update: params are not valid');
     }
     const updatable = createUpdatable(methodName, path, value);

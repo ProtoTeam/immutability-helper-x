@@ -15,6 +15,14 @@ test('a.b.c', () => {
     f: 4,
   });
 
+ // set a.b
+  expect(update.$set(obj, 'a.b', undefined)).toEqual({
+    a: {
+      b: undefined,
+    },
+    f: 4,
+  });
+
   // update.$push(object, 'arr', ['car', 'bus']);
   expect(update.$push(obj, 'a.b.e', ['car', 'bus'])).toEqual({
     a: {
