@@ -2,7 +2,6 @@
  * @file expand the immutability-helper, to support update by path string, like the get/set in lodash
  * **********************************
  * update.$set(object, 'a.b', newValue);
- * // for the array methods like $push/$unshift, you can update it with two forms
  * update.$push(object, 'arr', ['car', 'bus']);
  * update.$apply(object, 'a.b', value => ++value);
  * **********************************
