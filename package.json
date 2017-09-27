@@ -1,6 +1,6 @@
 {
   "name": "immutability-helper-x",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "expand the immutability-helper, to support update by path string, like the get/set in lodash",
   "main": "lib/index.js",
   "keywords": [
